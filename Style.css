@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Homepage</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <style>
+        /* Base styling */
+        body {
+            font-family: 'Arial', sans-serif; /* Base font for the page */
+            background-color: #f0f4f8; /* Light background for contrast */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Main container styling */
+        .container {
+            max-width: 1200px; /* Max width of the container */
+            margin: 0 auto; /* Center the container */
+            padding: 2em; /* Padding for the container */
+            text-align: center; /* Centered text */
+        }
+
+        /* Header styling */
+        h2 {
+            color: #2c3e50; /* Dark color for the header */
+            font-size: 2.5em; /* Large header size */
+            margin-bottom: 20px; /* Space below header */
+            animation: fadeIn 1s ease; /* Animation for header */
+        }
+
+        /* Card styling */
+        .card {
+            background-color: #ffffff; /* White background for cards */
+            border-radius: 15px; /* Rounded corners for cards */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            padding: 20px; /* Inner spacing for cards */
+            margin-bottom: 30px; /* Space between cards */
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+            position: relative; /* Positioning for animations */
+            overflow: hidden; /* Prevent overflow of content */
+        }
+
+        /* Card hover effect */
+        .card:hover {
+            transform: translateY(-5px); /* Lift effect */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+            animation: pulse 0.6s infinite; /* Pulse effect on hover */
+        }
+
+        /* Card title styling */
+        .card-title {
+            font-size: 1.8em; /* Increased font size for titles */
+            color: #2c3e50; /* Dark color for titles */
+            margin-bottom: 10px; /* Space below title */
+        }
+
+        /* Card description */
+        .card-description {
+            font-size: 1em; /* Normal font size for description */
+            color: #7f8c8d; /* Gray color for description */
+            margin: 15px 0; /* Margin for spacing */
+        }
+
+        /* Button styling */
+        .btn {
+            background-color: #007bff; /* Button color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            color: white; /* White text */
+            padding: 12px 20px; /* Padding for buttons */
+            cursor: pointer; /* Pointer on hover */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+
+        /* Button hover effect */
+        .btn:hover {
+            background-color: #0056b3; /* Darker button color on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Start invisible */
+                transform: translateY(-20px); /* Start above */
+            }
+            to {
+                opacity: 1; /* End visible */
+                transform: translateY(0); /* End in place */
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1); /* Normal size */
+            }
+            50% {
+                transform: scale(1.05); /* Slightly larger */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Welcome to Our Motivational Resources</h2>
+        <div class="card">
+            <h3 class="card-title">Inspiration</h3>
+            <p class="card-description">Find your inspiration and start your journey towards achieving your dreams.</p>
+            <button class="btn">Explore More</button>
+        </div>
+        <div class="card">
+            <h3 class="card-title">Motivation</h3>
+            <p class="card-description">Stay motivated with our curated content and tips.</p>
+            <button class="btn">Get Motivated</button>
+        </div>
+        <div class="card">
+            <h3 class="card-title">Resources</h3>
+            <p class="card-description">Access various resources to help you on your path to success.</p>
+            <button class="btn">Access Resources</button>
+        </div>
+    </div>
+
+</body>
+</html>
